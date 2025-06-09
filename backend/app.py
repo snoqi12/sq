@@ -5,6 +5,8 @@ import requests
 import datetime
 from tensorflow.keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
+import os
+
 
 app = Flask(__name__)
 CORS(app, origins=["https://vite-react-seven-lilac-41.vercel.app"])
@@ -59,4 +61,5 @@ def predict():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5050)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5050)))
+
