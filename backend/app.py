@@ -7,7 +7,7 @@ from tensorflow.keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://vite-react-seven-lilac-41.vercel.app"])
 
 model = load_model("timeseries_price_LSTM.h5")
 
