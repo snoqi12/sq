@@ -44,7 +44,7 @@ export default function App() {
   const fetchPrediction = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`https://cryptoui-production.up.railway.app/predict?coin=${coin}`);
+      const res = await fetch(`https://predicto.up.railway.app/predict?coin=${coin}`);
       const json = await res.json();
       setData(json);
     } catch (err) {
@@ -69,7 +69,7 @@ export default function App() {
         textAlign: "center"
       }}
     >
-      <h1 style={{ fontSize: "2rem" }}>CryptOracle 🔮</h1>
+      <h1 style={{ fontSize: "2rem" }}>Predicto 🔮</h1>
       <p style={{ marginBottom: "1rem" }}>
         Prediksi harga kripto menggunakan Machine Learning
       </p>
