@@ -44,7 +44,7 @@ export default function App() {
   const fetchPrediction = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`https://https://cryptoui-production-1a5b.up.railway.app//predict?coin=${coin}`);
+      const res = await fetch(`https://predicto.up.railway.app//predict?coin=${coin}`);
       const json = await res.json();
       setData(json);
     } catch (err) {
