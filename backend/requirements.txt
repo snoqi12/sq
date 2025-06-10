@@ -1,6 +1,6 @@
 flask
 flask-cors
-numpy
+numpy<2
 requests
 tensorflow-cpu==2.13.0
 scikit-learn
